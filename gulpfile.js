@@ -43,6 +43,7 @@ function watch() {
             port: 3000,
             proxy: "http://localhost/k2/ot"
         }
+		// when use with XAMPP remove server: and add only  proxy: "http://localhost/k2/ot"
     });
 
     gulp.watch(paths.scripts.src, gulp.parallel(scripts));
