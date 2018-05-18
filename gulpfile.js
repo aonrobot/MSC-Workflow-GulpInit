@@ -25,7 +25,9 @@ function clean(){
 function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(babel({
-            presets: ['es2015']
+            presets: [
+			    ['es2015', {modules: false}]
+			]
         }))
         .pipe(uglify())
         .pipe(concat('app.min.js'))
