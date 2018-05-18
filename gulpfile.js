@@ -26,7 +26,7 @@ function scripts() {
     return gulp.src(paths.scripts.src)
         .pipe(babel({
             presets: [
-			    ['es2015', {modules: false}]
+			    ['es2015', {modules: false}] // disable the strict mode
 			]
         }))
         .pipe(uglify())
